@@ -7,6 +7,9 @@ url: 'http://konradjurkowski.pl'
 twitter_username: konradjurkowski
 github_username: msx2
 
+sass:
+  style: :compressed
+
 slim:
   pretty: true
   format: html5
