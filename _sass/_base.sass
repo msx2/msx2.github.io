@@ -2,3 +2,19 @@ html, body
   +light
   width: 100%
   height: 100%
+
+
+a
+  +transition(all 0.5s ease-in-out)
+
+  &,
+  &:hover,
+  &:focus
+    text-decoration: none
+
+  &.active
+    color: $link-hover-color
+
+
+svg
+  width: 20px

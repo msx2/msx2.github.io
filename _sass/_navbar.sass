@@ -1,0 +1,32 @@
+.navbar
+  +medium
+  background: $navbar-bg
+  color: $navbar-color
+  padding: 0.75em 0
+  overflow: hidden
+  line-height: 40px
+  text-transform: uppercase
+  font-size: $navbar-font-size
+
+  img
+    +size(40px)
+
+  .brand-logo
+    float: left
+
+  +tablet
+    ul.menu-right
+      float: right
+      list-style-type: none
+      margin: 0
+      padding: 0
+
+      li
+        float: left
+
+      li + li
+        margin-left: 1.5em
+
+      a
+        +size(100%)
+        display: block

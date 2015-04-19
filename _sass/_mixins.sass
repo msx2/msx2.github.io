@@ -1,3 +1,4 @@
+// Font settings
 = extra-light
   font-weight: 200
 
@@ -13,6 +14,64 @@
 = extra-bold
   font-weight: 800
 
+
 = smooth
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
+
+// Responsiveness – helpers
+
+$screen-min: (xs: null, sm: $screen-sm-min, md: $screen-md-min, lg: $screen-lg-min)
+$screen-max: (xs: $screen-xs-max, sm: $screen-sm-max, md: $screen-md-max, lg: null)
+$screen-types: (phone: xs, tablet: sm, desktop: md, lg-desktop: lg)
+
+= phone($operator: gte)
+  +screen-width(phone, $operator)
+    @content
+
+= tablet($operator: gte)
+  +screen-width(tablet, $operator)
+    @content
+
+= desktop($operator: gte)
+  +screen-width(desktop, $operator)
+    @content
+
+= lg-desktop($operator: gte)
+  +screen-width(lg-desktop, $operator)
+    @content
+
+= screen-width($screen-type, $operator)
+  $min-max: screen-size-edges($screen-type)
+  $min: nth($min-max, 1)
+  $max: nth($min-max, 2)
+
+  @if index(eq '==', $operator)
+    @if $min == null
+      $operator: lte
+    @else if $max == null
+      $operator: gte
+
+  @if index(eq '==', $operator)
+    +screen($min, $max)
+      @content
+  @else if index(gte '>=', $operator)
+    @if $min == null
+      @content
+    @else
+      +min-screen($min)
+        @content
+  @else if index(lte '<=', $operator)
+    @if $max == null
+      @content
+    @else
+      +max-screen($max)
+        @content
+  @else
+    @content
+
+@function screen-size-edges($screen-type)
+  @if index(map-keys($screen-types), $screen-type)
+    $screen-type: map-get($screen-types, $screen-type)
+  @return map-get($screen-min, $screen-type), map-get($screen-max, $screen-type)
