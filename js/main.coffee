@@ -2,4 +2,4 @@
 ---
 
 $(document).on 'ready', ->
-  $('[data-typer-targets]').typer()
+  setTimeout (-> $('[data-typer-targets]').typer()), 2000
