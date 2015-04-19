@@ -47,3 +47,35 @@
     +smooth
     text-transform: uppercase
     margin: 0.5em 0
+
+  .typer
+    span
+      color: $home-color !important
+      background: $brand-secondary !important
+
+
+.home-box + a
+  +size(50px)
+  color: $home-scroll-down-color
+  border: solid $home-scroll-down-color 2px
+  border-radius: 50%
+  position: absolute
+  z-index: 20
+  left: 50%
+  margin-left: -25px
+  bottom: 2em
+
+  .scroll-down
+    +size(100%)
+    line-height: 50px
+    text-align: center
+    font-size: 2em
+
+  i
+    +animation(wobble 1.5s 20)
+
+  &:active,
+  &:hover,
+  &:focus
+    i
+      +animation-play-state(paused)
