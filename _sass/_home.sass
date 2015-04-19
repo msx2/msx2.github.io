@@ -1,2 +1,52 @@
+.home
+  +display(flex)
+  +align-items(center)
+  height: 100%
+  background: $home-bg
+  color: $home-color
+
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+
+  &::before
+    +opacity(0.25)
+    z-index: 5
+    background: url('../img/bg--home.jpg')
+    background-size: cover
+    background-position: 50%
+
+  &::after
+    z-index: 10
+    background: url('../img/bg--pattern.png')
+
+
+.home-box
+  +align-self(center)
+  +extra-light
+  position: relative
+  z-index: 20
+  margin: 0 auto
+  text-align: center
+  font-size: $font-size-large
+
+  .name
+    +medium
+    margin: 0
+    font-size: inherit
+    display: inline
+
+  h1
+    +extra-bold
+    +smooth
+    text-transform: uppercase
+    margin: 1em 0
+
 svg
   width: 20px
