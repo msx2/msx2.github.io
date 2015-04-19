@@ -16,5 +16,38 @@ a
     color: $link-hover-color
 
 
+
+.section
+  border-top: solid 1px $section-border-color
+
+  +tablet(lte)
+    padding: 3em 0
+
+  +tablet
+    padding: 4.5em 0
+
+  +desktop
+    padding: 6em 0
+
+  &.section--gray
+    background: $section-gray-bg
+
+  &.section--primary
+    background: $section-primary-bg
+    color: $section-primary-color
+
+
+.section .section-header
+  text-transform: uppercase
+  text-align: center
+  margin-bottom: 3em
+
+  h2
+    +medium
+    +smooth
+    display: inline
+    margin: 0
+
+
 svg
   width: 20px

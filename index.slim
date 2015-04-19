@@ -19,6 +19,7 @@ section.home
       i.ion.ion-ios-arrow-down
       .sr-only Scroll down
 
+
 section.navbar
   nav.container
     a.brand-logo href='#'
@@ -30,3 +31,48 @@ section.navbar
       li: a href='#experience' Experience
       li: a href='#skills' Skills
       li: a href='#contact' Contact
+
+
+section.section.section--gray
+  .container
+    .section-header: h2 About me
+
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget tempor ligula. Nam quis rhoncus mauris, sed feugiat eros. Sed sit amet ipsum nunc. Aliquam pharetra venenatis quam, vitae dapibus justo eleifend id. Sed condimentum nibh lorem, eu auctor dolor vulputate sed. Praesent non ultricies ante. Suspendisse ut pulvinar nisl, eget consectetur dui. Maecenas at euismod nisl, non maximus lectus.
+
+
+section.section.section--white
+  .container
+    .section-header: h2 Experience
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget tempor ligula. Nam quis rhoncus mauris, sed feugiat eros. Sed sit amet ipsum nunc. Aliquam pharetra venenatis quam, vitae dapibus justo eleifend id. Sed condimentum nibh lorem, eu auctor dolor vulputate sed. Praesent non ultricies ante. Suspendisse ut pulvinar nisl, eget consectetur dui. Maecenas at euismod nisl, non maximus lectus.
+
+
+section.section.section--primary
+  .container
+    .section-header: h2 Skills
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget tempor ligula. Nam quis rhoncus mauris, sed feugiat eros. Sed sit amet ipsum nunc. Aliquam pharetra venenatis quam, vitae dapibus justo eleifend id. Sed condimentum nibh lorem, eu auctor dolor vulputate sed. Praesent non ultricies ante. Suspendisse ut pulvinar nisl, eget consectetur dui. Maecenas at euismod nisl, non maximus lectus.
+
+
+section.section.section--white
+  .container
+    .section-header: h2 Contact
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget tempor ligula. Nam quis rhoncus mauris, sed feugiat eros. Sed sit amet ipsum nunc. Aliquam pharetra venenatis quam, vitae dapibus justo eleifend id. Sed condimentum nibh lorem, eu auctor dolor vulputate sed. Praesent non ultricies ante. Suspendisse ut pulvinar nisl, eget consectetur dui. Maecenas at euismod nisl, non maximus lectus.
+
+
+footer
+  .container.text-center
+    ul.list-inline
+      li: a href='https://github.com/{{ site.github_username }}'
+        i.ion.ion-social-github
+        .sr-only Github
+
+      li: a href='https://twitter.com/{{ site.twitter_username }}'
+        i.ion.ion-social-twitter
+        .sr-only Twitter
+
+      li: a href='{{ site.linkedin_url }}'
+        i.ion.ion-social-linkedin
+        .sr-only LinkedIn
+
+      li: a href='https://www.facebook.com/{{ site.facebook_username }}'
+        i.ion.ion-social-facebook
+        .sr-only Facebook
