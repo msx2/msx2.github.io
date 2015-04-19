@@ -9,7 +9,10 @@ twitter_username: 'konradjurkowski'
 facebook_username: 'konradjurkowski'
 linkedin_url: 'https://pl.linkedin.com/pub/konrad-jurkowski/87/13/aa1'
 
-gems: [bootstrap-sass, jekyll-slim]
+gems:
+  - bootstrap-sass
+  - jekyll-slim
+  - slim
 
 sass:
   style: :compressed
