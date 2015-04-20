@@ -14,7 +14,7 @@ try{targets=JSON.parse($e.attr($.typer.options.typerDataAttr)).targets;}catch(e)
 if(typeof targets==="undefined"){targets=$.map($e.attr($.typer.options.typerDataAttr).split(','),function(e){return $.trim(e);});}
 $e.typeTo(targets[Math.floor(Math.random()*targets.length)]);};$.typer=(function(){return{options:options};})();$.extend($.typer,{options:options});$.fn.typer=function(){var $elements=$(this);return $elements.each(function(){var $e=$(this);if(typeof $e.attr($.typer.options.typerDataAttr)==="undefined"){return;}
 typeWithAttribute($e);setInterval(function(){typeWithAttribute($e);},typerInterval());});};$.fn.typeTo=function(newString){var
-$e=$(this),currentText=$e.text(),i=0,j=0;if(currentText===newString){console.log("Our strings our equal, nothing to type");return $e;}
+$e=$(this),currentText=$e.text(),i=0,j=0;if(currentText===newString){return $e;}
 if(currentText!==$e.html()){console.error("Typer does not work on elements with child elements.");return $e;}
 $e.data('typing',true);while(currentText.charAt(i)===newString.charAt(i)){i++;}
 while(currentText.rightChars(j)===newString.rightChars(j)){j++;}
