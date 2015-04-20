@@ -36,6 +36,58 @@ a
     background: $section-primary-bg
     color: $section-primary-color
 
+  &.section--secondary
+    background: $section-secondary-bg
+    color: $section-secondary-color
+
+  &.section--quote
+    padding: 1em 0
+
+    blockquote
+      +smooth
+      +extra-light
+      border: 0
+      line-height: 1
+      text-align: center
+      font-size: 2em
+      margin-bottom: 0
+
+      +tablet
+        font-size: 2.5em
+
+      +desktop
+        font-size: 3em
+
+      p
+        margin: 0
+
+        &::before,
+        &::after
+          +opacity(0.5)
+
+        &::before
+          content: '\201c'
+
+        &::after
+          content: '\201d'
+
+      br
+        +tablet(lte)
+          display: none
+
+      cite
+        +light
+        font-size: $font-size-base
+        line-height: 1
+        display: block
+        margin-top: 0.5em
+
+        &::before,
+        &::after
+          +opacity(0.5)
+          content: '\2014'
+          margin: 0 0.5em
+
 
 .section .section-header
   text-transform: uppercase
