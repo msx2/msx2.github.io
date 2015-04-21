@@ -1,0 +1,28 @@
+.social-media
+  .list-inline
+    margin-top: 2.5em
+
+    +phone(lte)
+      margin-top: 1.75em
+
+  .list-inline a
+    +size($contact-social-size)
+    +opacity(0.6)
+    display: block
+    font-size: 2em
+    line-height: $contact-social-size
+    text-align: center
+    color: $contact-social-color
+    border: solid 1px $contact-social-border-color
+    border-radius: 50%
+
+    +phone(lte)
+      +size($contact-social-size-small)
+      line-height: $contact-social-size-small
+      font-size: 1.5em
+
+    &:hover
+      +opacity(1)
+      color: $contact-social-hover-border-color
+      border-color: transparent
+      background: $contact-social-hover-bg

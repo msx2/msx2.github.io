@@ -37,22 +37,22 @@ layout: default
 
 <section id="about" class="section section--gray">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header wow fadeIn">
       <h2>About me</h2>
       <h3 class="text-primary">Ruby on Rails / Front-end Developer, Certified ScrumMaster</h3>
     </div>
 
     <div class="row">
-      <div class="col-sm-4 col-md-3">
+      <div class="col-sm-4 col-md-3 wow fadeIn" data-wow-delay="0.5s">
         <div class="about--picture">
           <img src="./img/photo.jpg" alt="Konrad Jurkowski" class="normal">
           <img src="./img/photo2.jpg" alt="Konrad Jurkowski" class="hover">
         </div>
       </div>
-      <div class="col-sm-8 col-md-9">
+      <div class="col-sm-8 col-md-9 wow fadeIn">
         <p>My name is Konrad Jurkowski and I live in Warsaw, Poland. I'm a programmer specialized mainly in web applications, but I also have some experience creating mobile applications. For a day-to-day web development I prefer using Ruby on Rails, with technology stack consisting of Sass, CoffeeScript, Slim and... of course, Ruby.</p>
         <p>As a developer, I always focus on delivering a tested and scalable product of very high standard. I use continuous integration systems and deploy the application to staging environments with production settings to test its real-life behavior.</p>
-        <p>When I don't write any code, I'm probably doing some gardening, wasting time watching yet another cool and popular TV Series or playing on PS4. <span class="emoji ghost">&#x1F47B;</span></p>
+        <p>When I don't write any code, I'm probably doing some gardening, wasting time watching yet another cool and popular TV Series or playing on PS4. <span class="emoji ghost wow fadeInUp" data-wow-delay="2s">&#x1F47B;</span></p>
       </div>
     </div>
   </div>
@@ -60,7 +60,7 @@ layout: default
 
 
 <section class="section section--secondary section--quote">
-  <blockquote class="container">
+  <blockquote class="container wow fadeInUp">
     <p>Perfection is not attainable, but if we <br>chase perfection we can catch excellence.</p>
     <cite>Vince Lombardi</cite>
   </blockquote>
@@ -68,7 +68,7 @@ layout: default
 
 
 <section id="experience" class="section section--white">
-  <div class="container">
+  <div class="container wow">
     <div class="section-header"><h2>Experience</h2></div>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget tempor ligula. Nam quis rhoncus mauris, sed feugiat eros. Sed sit amet ipsum nunc. Aliquam pharetra venenatis quam, vitae dapibus justo eleifend id. Sed condimentum nibh lorem, eu auctor dolor vulputate sed. Praesent non ultricies ante. Suspendisse ut pulvinar nisl, eget consectetur dui. Maecenas at euismod nisl, non maximus lectus.</p>
@@ -86,7 +86,7 @@ layout: default
 
 
 <section class="section section--gray section--quote">
-  <blockquote class="container">
+  <blockquote class="container wow fadeInDown">
     <p>The ability to simplify means to eliminate the <br>unnecessary so that the necessary may speak.</p>
     <cite>Hans Hoffmann</cite>
   </blockquote>
@@ -95,37 +95,51 @@ layout: default
 
 <section id="contact" class="section section--white">
   <div class="container">
-    <div class="section-header"><h2>Contact</h2></div>
+    <div class="section-header wow fadeIn">
+      <h2>Contact</h2>
+      <h3>I'm available for freelance projects</h3>
+    </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget tempor ligula. Nam quis rhoncus mauris, sed feugiat eros. Sed sit amet ipsum nunc. Aliquam pharetra venenatis quam, vitae dapibus justo eleifend id. Sed condimentum nibh lorem, eu auctor dolor vulputate sed. Praesent non ultricies ante. Suspendisse ut pulvinar nisl, eget consectetur dui. Maecenas at euismod nisl, non maximus lectus.</p>
+    <div class="row wow fadeIn">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
+        <p>If you would like to contact me regarding a project or an idea you have for an awesome application, or just want to say hi, pick one of the methods below and shoot me a message.</p>
+      </div>
+    </div>
+
+    <div class="social-media text-center">
+      <ul class="list-inline">
+        <li class="wow fadeInUp"><a href="mailto:{{ site.email }}" rel="nofollow">
+          <i class="ion ion-email"></i>
+          <span class="sr-only">E-mail</span>
+        </a></li>
+
+        <li class="wow fadeInUp" data-wow-delay="0.15s"><a href="{{ site.linkedin_url }}">
+          <i class="ion ion-social-linkedin"></i>
+          <span class="sr-only">LinkedIn</span>
+        </a></li>
+
+        <li class="wow fadeInUp" data-wow-delay="0.3s"><a href="https://github.com/{{ site.github_username }}">
+          <i class="ion ion-social-github"></i>
+          <span class="sr-only">Github</span>
+        </a></li>
+
+        <li class="wow fadeInUp" data-wow-delay="0.45s"><a href="https://twitter.com/{{ site.twitter_username }}">
+          <i class="ion ion-social-twitter"></i>
+          <span class="sr-only">Twitter</span>
+        </a></li>
+
+        <li class="wow fadeInUp" data-wow-delay="0.6s"><a href="https://www.facebook.com/{{ site.facebook_username }}">
+          <i class="ion ion-social-facebook"></i>
+          <span class="sr-only">Facebook</span>
+        </a></li>
+      </ul>
+    </div>
   </div>
 </section>
 
 
 <footer>
   <div class="container text-center">
-    <ul class="list-inline">
-      <li><a href="https://github.com/{{ site.github_username }}">
-        <i class="ion ion-social-github"></i>
-        <span class="sr-only">Github</span>
-      </a></li>
-
-      <li><a href="https://twitter.com/{{ site.twitter_username }}">
-        <i class="ion ion-social-twitter"></i>
-        <span class="sr-only">Twitter</span>
-      </a></li>
-
-      <li><a href="{{ site.linkedin_url }}">
-        <i class="ion ion-social-linkedin"></i>
-        <span class="sr-only">LinkedIn</span>
-      </a></li>
-
-      <li><a href="https://www.facebook.com/{{ site.facebook_username }}">
-        <i class="ion ion-social-facebook"></i>
-        <span class="sr-only">Facebook</span>
-      </a></li>
-    </ul>
-
     <p>Copyright &copy;2015 Konrad Jurkowski</p>
   </div>
 </footer>
