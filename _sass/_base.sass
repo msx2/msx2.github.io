@@ -20,6 +20,9 @@ a
   color: $link-hover-color
 
 
+p
+  line-height: 1.5em
+
 
 .section
   border-top: solid 1px $section-border-color
@@ -64,6 +67,7 @@ a
 
       p
         text-shadow: 1px 1px 1px rgba($brand-primary, 0.3)
+        line-height: 1
         margin: 0
 
         &::before,
@@ -102,8 +106,16 @@ a
   h2
     +medium
     +smooth
+    text-shadow: 1px 1px 1px rgba($brand-secondary, 0.3)
     display: inline
     margin: 0
+
+  h3
+    +light
+    +smooth
+    font-size: 1em
+    text-transform: none
+    margin: 0.5em 0 0
 
 
 svg
