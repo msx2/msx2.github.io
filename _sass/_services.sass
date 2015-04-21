@@ -1,7 +1,17 @@
 .services-row
+  +tablet(lte)
+    margin-top: -2em
+
   + .services-row
     +desktop
       margin-top: 4em
+
+  > div
+    +tablet(lte)
+      margin: 2em 0 0
+
+      &:nth-child(odd)
+        clear: both
 
   img
     +size($services-icon-size)
