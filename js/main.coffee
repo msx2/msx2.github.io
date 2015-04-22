@@ -8,6 +8,10 @@ $(document).on 'ready', ->
   $('.navbar').sticky()
 
 
+  $('.navbar-toggle').on 'click', (event) ->
+    $(event.currentTarget).siblings('.nav').toggleClass('visible')
+
+
   $('[data-toggle="tooltip"]').tooltip html: true
   $('[data-toggle="tooltip"]').on 'click', (event) ->
     $(event.currentTarget).tooltip 'hide'

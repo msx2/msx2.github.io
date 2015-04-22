@@ -21,12 +21,41 @@
     img
       +size(60px)
 
+  ul.menu-right
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+    a
+      +size(100%)
+      display: block
+
+  +tablet(lte)
+    ul.menu-right
+      +transition(all 0.4s linear)
+      display: none
+      text-align: center
+      margin: 0 -15px -0.75em
+      padding-top: 0.75em
+
+      &.visible
+        clear: both
+        height: auto
+        display: block
+
+      li
+        border-top: solid 1px $section-border-color
+
+    button
+      display: block
+      float: right
+      font-size: 31px
+      line-height: 1
+      margin-top: 7px
+
   +tablet
     ul.menu-right
       float: right
-      list-style-type: none
-      margin: 0
-      padding: 0
 
       li
         float: left
@@ -34,9 +63,9 @@
       li + li
         margin-left: 1.5em
 
-      a
-        +size(100%)
-        display: block
+    button
+      display: none
+
 
 .is-sticky .navbar
   +box-shadow(0px 1px 1px 1px rgba($brand-primary, 0.4))
