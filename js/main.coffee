@@ -2,7 +2,8 @@
 ---
 
 $(document).on 'ready', ->
-  setTimeout (-> $('[data-typer-targets]').typer()), 2000
+  if $(window).width() >= 768
+    setTimeout (-> $('[data-typer-targets]').typer()), 2000
 
 
   $('.navbar').sticky()

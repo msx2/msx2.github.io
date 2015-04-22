@@ -2,8 +2,12 @@
   +display(flex)
   +align-items(center)
   height: 100%
+  min-height: 400px
   background: $home-bg
   color: $home-color
+
+  +tablet(lte)
+    padding: 0 0.5em
 
   &::before,
   &::after
@@ -36,6 +40,9 @@
   text-align: center
   font-size: $home-font-size
 
+  +tablet(lte)
+    padding-bottom: 2.25em
+
   .name
     +medium
     margin: 0
@@ -47,6 +54,9 @@
     +smooth
     text-transform: uppercase
     margin: 0.5em 0
+
+    +tablet(lte)
+      font-size: 1.5em
 
   .typer
     span
