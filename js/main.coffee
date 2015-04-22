@@ -12,6 +12,9 @@ $(document).on 'ready', ->
   $('.navbar-toggle').on 'click', (event) ->
     $(event.currentTarget).siblings('.nav').toggleClass('visible')
 
+  $('.navbar a').on 'click', (event) ->
+    $(event.currentTarget).parents('.nav').removeClass('visible')
+
 
   $('[data-toggle="tooltip"]').tooltip html: true
   $('[data-toggle="tooltip"]').on 'click', (event) ->
