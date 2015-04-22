@@ -13,27 +13,27 @@
 
     <div class="social-media text-center">
       <ul class="list-inline">
-        <li class="wow fadeInUp"><a href="mailto:{{ site.email }}" rel="nofollow">
+        <li class="wow fadeInUp"><a href="mailto:{{ site.email }}" rel="nofollow" data-toggle="tooltip" title="{{ site.email }}">
           <i class="ion ion-email"></i>
           <span class="sr-only">E-mail</span>
         </a></li>
 
-        <li class="wow fadeInUp" data-wow-delay="0.15s"><a href="{{ site.linkedin_url }}">
+        <li class="wow fadeInUp" data-wow-delay="0.15s"><a href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank" data-toggle="tooltip" title="<span class='accent'>linkedin.com/in/</span>{{ site.linkedin }}">
           <i class="ion ion-social-linkedin"></i>
           <span class="sr-only">LinkedIn</span>
         </a></li>
 
-        <li class="wow fadeInUp" data-wow-delay="0.3s"><a href="https://github.com/{{ site.github_username }}">
+        <li class="wow fadeInUp" data-wow-delay="0.3s"><a href="https://github.com/{{ site.github }}" target="_blank" data-toggle="tooltip" title="<span class='accent'>github.com/</span>{{ site.github }}">
           <i class="ion ion-social-github"></i>
           <span class="sr-only">Github</span>
         </a></li>
 
-        <li class="wow fadeInUp" data-wow-delay="0.45s"><a href="https://twitter.com/{{ site.twitter_username }}">
+        <li class="wow fadeInUp" data-wow-delay="0.45s"><a href="https://twitter.com/{{ site.twitter }}" target="_blank" data-toggle="tooltip" title="<span class='accent'>twitter.com/</span>{{ site.twitter }}">
           <i class="ion ion-social-twitter"></i>
           <span class="sr-only">Twitter</span>
         </a></li>
 
-        <li class="wow fadeInUp" data-wow-delay="0.6s"><a href="https://www.facebook.com/{{ site.facebook_username }}">
+        <li class="wow fadeInUp" data-wow-delay="0.6s"><a href="https://www.facebook.com/{{ site.facebook }}" target="_blank" data-toggle="tooltip" title="<span class='accent'>facebook.com/</span>{{ site.facebook }}">
           <i class="ion ion-social-facebook"></i>
           <span class="sr-only">Facebook</span>
         </a></li>

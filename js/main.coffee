@@ -8,6 +8,11 @@ $(document).on 'ready', ->
   $('.navbar').sticky()
 
 
+  $('[data-toggle="tooltip"]').tooltip html: true
+  $('[data-toggle="tooltip"]').on 'click', (event) ->
+    $(event.currentTarget).tooltip 'hide'
+
+
   $('a').smoothScroll
     speed: 'auto'
     autoCoefficient: 1
