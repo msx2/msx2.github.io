@@ -6,7 +6,8 @@ $(document).on 'ready', ->
     setTimeout (-> $('[data-typer-targets]').typer()), 2000
 
 
-  $('.navbar').sticky()
+  unless /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
+    $('.navbar').sticky()
 
 
   $('.navbar-toggle').on 'click', (event) ->
