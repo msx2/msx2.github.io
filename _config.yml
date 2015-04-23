@@ -11,6 +11,8 @@ twitter: 'konradjurkowski'
 facebook: 'konradjurkowski'
 linkedin: 'konradjurkowski'
 
+analytics_uid: 'UA-43296267-1'
+
 sass:
   sass_dir: _sass
   style: :compressed
