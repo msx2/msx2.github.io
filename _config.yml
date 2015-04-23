@@ -14,7 +14,3 @@ linkedin: 'konradjurkowski'
 sass:
   sass_dir: _sass
   style: :compressed
-
-slim:
-  pretty: true
-  format: html5
